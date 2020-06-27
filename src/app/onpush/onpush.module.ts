@@ -22,6 +22,9 @@ import { BbbComponent } from './bbb/bbb.component';
 	],
 	imports: [
 		CommonModule
+	],
+	exports: [
+		BComponent
 	]
 })
 export class OnpushModule { }

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DefaultModule } from './default/default.module';
+import { DetachModule } from './detach/detach.module';
 import { OnpushModule } from './onpush/onpush.module';
 
 
@@ -13,7 +14,8 @@ import { OnpushModule } from './onpush/onpush.module';
 	imports: [
 		BrowserModule,
 		DefaultModule,
-		OnpushModule
+		OnpushModule,
+		DetachModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DoCheck } from '@angular/core';
+
 
 @Component({
-  selector: 'app-aab',
-  templateUrl: './aab.component.html',
-  styleUrls: ['./aab.component.less']
+	selector: 'app-aab',
+	templateUrl: './aab.component.html',
+	styleUrls: ['./aab.component.less'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AabComponent implements OnInit {
+export class AabComponent implements DoCheck {
 
-  constructor() { }
+	title = 'AAB Component';
+	ngDoCheck(): void {
+		console.log('AAB checked');
+	}
 
-  ngOnInit(): void {
-  }
+	log(): void {
+		console.log('AAB triggered');
+	}
 
 }

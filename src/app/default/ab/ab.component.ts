@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
+
 
 @Component({
-  selector: 'app-ab',
-  templateUrl: './ab.component.html',
-  styleUrls: ['./ab.component.less']
+	selector: 'app-ab',
+	templateUrl: './ab.component.html',
+	styleUrls: ['./ab.component.less']
 })
-export class AbComponent implements OnInit {
+export class AbComponent implements DoCheck {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+	title = 'AB Component';
+	ngDoCheck(): void {
+		console.log('AB checked');
+	}
 }

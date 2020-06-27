@@ -22,6 +22,7 @@ import { AbbComponent } from './abb/abb.component';
 	],
 	imports: [
 		CommonModule
-	]
+	],
+	exports: [AComponent]
 })
 export class DefaultModule { }

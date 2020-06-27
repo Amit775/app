@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 
 
 @Component({
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './b.component.html',
 	styleUrls: ['./b.component.less']
 })
-export class BComponent implements OnInit {
+export class BComponent implements DoCheck {
 
-	constructor() { }
-
-	ngOnInit(): void {
+	ngDoCheck(): void {
+		console.log('B checked');
 	}
 
 }

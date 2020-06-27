@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
+
 
 @Component({
-  selector: 'app-c',
-  templateUrl: './c.component.html',
-  styleUrls: ['./c.component.less']
+	selector: 'app-c',
+	templateUrl: './c.component.html',
+	styleUrls: ['./c.component.less']
 })
-export class CComponent implements OnInit {
+export class CComponent implements DoCheck {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+	ngDoCheck(): void {
+		console.log('C checked');
+	}
 
 }

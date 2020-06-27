@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DoCheck } from '@angular/core';
+
 
 @Component({
-  selector: 'app-a',
-  templateUrl: './a.component.html',
-  styleUrls: ['./a.component.less']
+	selector: 'app-a',
+	templateUrl: './a.component.html',
+	styleUrls: ['./a.component.less'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AComponent implements OnInit {
+export class AComponent implements DoCheck {
 
-  constructor() { }
+	title = 'A Component';
+	ngDoCheck(): void {
+		console.log('A checked');
+	}
 
-  ngOnInit(): void {
-  }
-
+	log(): void {
+		console.log('A triggered');
+	}
 }

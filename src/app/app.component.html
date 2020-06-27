@@ -1,1 +1,16 @@
-<div> {{title}} </div>
+<div class="container">
+	<input hidden #strategy />
+	<div class="nav-bar">
+		<span (click)="strategy.value = 'default'" [class.selected]="strategy.value == 'default'">Default</span>
+		<span (click)="strategy.value = 'onpush'" [class.selected]="strategy.value == 'onpush'">OnPush</span>
+		<span (click)="strategy.value = 'detach'" [class.selected]="strategy.value == 'detach'">detach</span>
+	</div>
+	<div class="tree" [ngSwitch]="strategy.value">
+		<app-a *ngSwitchCase="'default'"></app-a>
+		<app-b *ngSwitchCase="'onpush'"></app-b>
+		<app-c *ngSwitchCase="'detach'"></app-c>
+		<div class="no-strategy" *ngSwitchDefault>
+			Choose srategy
+		</div>
+	</div>
+</div>
